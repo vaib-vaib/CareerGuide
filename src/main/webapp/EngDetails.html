@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>EngDetails</title>
+<link rel="stylesheet" href="Details.css">
+<style> 
+ input[type=submit] {
+  background-color: #003366;
+  border: none;
+  color: white;
+  font-size:20px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<script>
+	function myFun(){
+		var a = document.getElementById("rank").value;
+		if(a==""){
+			document.getElementById("Message").innerHTML="*Please enter rank!";
+			return false;
+		}
+		if(a.length>6){
+			document.getElementById("Message").innerHTML="*Enter a valid rank!";
+			return false;
+		}
+		if(isNaN(a)){
+			document.getElementById("Message").innerHTML="*Rank should be in digits only and no space between digits is allowed!";
+			return false;
+		}
+	return true;	
+	}
+</script>
+<section>
+	<br>
+	<br>
+	<br>
+        <br>
+	<h1>Fill the Details</h1>
+        <form onsubmit="return myFun()" action = "serverlet">
+	<h2>
+	Rank  : <input type="text" id="rank" name = "rank" value="" ><span id="Message"></span>
+	</h2>
+	<h2>
+	Category  :<input type="radio"  name="category" value="open"/>Open
+		<input type="radio"  name="category" value="SC"/>SC
+		<input type="radio"  name="category" value="ST"/>ST
+		<input type="radio"  name="category" value="VJ"/>VJ
+		<input type="radio"  name="category" value="NT1"/>NT1
+		<input type="radio"  name="category" value="NT2"/>NT2
+		<input type="radio"  name="category" value="NT3"/>NT3
+		<input type="radio"  name="category" value="EWS"/>EWS
+	</h2>
+	<h2>
+	Branch  :<input type="radio" name="branch" value="comp"/>Comp
+	           <input type="radio" name="branch" value="it"/>IT
+	           <input type="radio" name="branch" value="electrical"/>Electrical
+	           <input type="radio" name="branch" value="entc"/>ENTC
+	           <input type="radio" name="branch" value="mech"/>Mechanical
+	           <input type="radio" name="branch" value="civil"/>Civil
+	           <input type="radio" name="branch" value="instru"/>Instrumentation
+	           <input type="radio" name="branch" value="production"/>Production
+	           <input type="radio" name="branch" value="chemical"/>Chemical
+	           <input type="radio" name="branch" value="textile"/>Textile
+	</h2>
+	<center><input type="submit" value="College Predictor"> 
+</form>
+</body>
+</html>

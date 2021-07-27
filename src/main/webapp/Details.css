@@ -1,0 +1,24 @@
+section{
+       width: 100%;
+       height:110%;
+	position:center;
+       background: url(https://i.pinimg.com/originals/39/2d/67/392d675638b96f888aebf283910b3b50.jpg);
+       background-size: cover;
+}
+
+h1{
+      font-size:120px;
+      font-style:italic;
+      color:white;
+      text-align:center;
+}
+
+h2{
+text-align:center;
+color:#003366;
+}
+
+span{
+font-size:10px;
+color:red;
+}

@@ -1,0 +1,40 @@
+h1{
+color:#003153;
+text-align:center;
+transform: translate(0%,300%);
+}
+section{
+       width: 100%;
+       height:100%;
+       transform: translate(0%,0%);
+       background: url(ChoicesEngMed.jpeg);
+       background-position: center;
+       background-size: cover;
+       
+}
+.button {
+  background-color: #003153; /* Green */
+  border:none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button:hover
+{
+  box-shadow: 0 5px 50px #15f4ee inset, 0 5px 50px 0 #15f4ee;
+}
+.container{
+  position:absolute;
+  left:50%;
+  transform: translate(-100%,300%);
+}
+
+.header{
+ position:absolute;
+ right:50%;
+ transform: translate(155%,300%);
+}

@@ -21,7 +21,13 @@ public class serverlet extends HttpServlet {
         E.startPushing();
         
         ArrayList<String> myclg = E.searching_engg(rank, categry,branch);
+        
         PrintWriter out = res.getWriter();
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Result</title>");
+        out.println("</head>");
+        out.println("<body style='background-color:powderblue;'>");
         
         if(myclg.isEmpty()) {
         	out.println("<h1>");
@@ -34,12 +40,13 @@ public class serverlet extends HttpServlet {
             out.println("Applicable clgs are :");
             out.println("</h1>");
             for(int i=0;i < myclg.size();i++) {
-               out.println("<p>");
+               out.println("<p style='color:white;'>");
                out.println("<center>");
-        	   out.println((i+1) +" )"+myclg.get(i));
+        	   out.println((i+1) +" ) "+myclg.get(i));
         	   out.println("</p>");
             }
        }
+       out.println("</html>");
 	}
 
 }

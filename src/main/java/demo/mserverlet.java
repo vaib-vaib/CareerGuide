@@ -18,6 +18,12 @@ public class mserverlet extends HttpServlet {
         M.startPushing();
         
         PrintWriter out = res.getWriter();
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Result</title>");
+        out.println("</head>");
+        out.println("<body style='background-color:powderblue;'>");
+        
         ArrayList<String> myclg = M.searching_med(rank, categry);
         if(myclg.isEmpty()) {
         	out.println("<h1>");
@@ -32,11 +38,10 @@ public class mserverlet extends HttpServlet {
             for(int i=0;i < myclg.size();i++) {
             	out.println("<p>");
                out.println("<center>");
-        	   out.println((i+1) +" )"+myclg.get(i));
+        	   out.println((i+1) +" ) "+myclg.get(i));
         	   out.println("</p>");
             }
        }
-        out.println("</body>");
         out.println("</html>");
 	}
 

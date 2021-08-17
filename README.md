@@ -1,5 +1,4 @@
 # CareerGuide
-Project - Career Guide Website
 
 -Dynamic Web Project - Response as per request
 
